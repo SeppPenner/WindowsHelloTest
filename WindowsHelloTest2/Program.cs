@@ -2,18 +2,38 @@
 namespace WindowsHelloTest2
 {
     using System;
+    using System.IO;
 
     using WindowsHello;
 
+    /// <summary>
+    /// This class decrypts some data with the Windows Hello API from a file.
+    /// </summary>
     public class Program
     {
-        public static void Main(string[] args)
+        /// <summary>
+        /// Decrypts some data with the Windows Hello API from a file.
+        /// </summary>
+        public static void Main()
         {
+            Console.WriteLine("Starting");
+
             var handle = new IntPtr();
-            var data = new byte[] { 0x32, 0x32 };
             IAuthProvider provider = new WinHelloProvider("Hello", handle);
-            var encryptedData = provider.Encrypt(data);
+            var parentPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent?.Parent?.FullName;
+            if (parentPath == null)
+            {
+                Console.WriteLine("Some error occurred with the parent path...");
+            }
+
+            var path = Path.Combine(parentPath, "test.dat");
+            var encryptedData = File.ReadAllBytes(path);
             var decryptedData = provider.PromptToDecrypt(encryptedData);
+
+            Console.WriteLine($"Decrypted data: { BitConverter.ToString(decryptedData).Replace("-", " ")}");
+
+            Console.WriteLine("Done.");
+            Console.ReadKey();
         }
     }
 }
