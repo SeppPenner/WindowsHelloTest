@@ -22,4 +22,5 @@ The assembly was written and tested in .Net 4.8.
 Change history
 --------------
 
+* **Version 1.0.1.0 (2019-10-28)** : Updated nuget packages, added GitVersionTask.
 * **Version 1.0.0.0 (2019-08-29)** : 1.0 release.
