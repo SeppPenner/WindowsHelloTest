@@ -8,7 +8,7 @@ The assembly was written and tested in .Net 4.8.
 [![GitHub issues](https://img.shields.io/github/issues/SeppPenner/WindowsHelloTest.svg)](https://github.com/SeppPenner/WindowsHelloTest/issues)
 [![GitHub forks](https://img.shields.io/github/forks/SeppPenner/WindowsHelloTest.svg)](https://github.com/SeppPenner/WindowsHelloTest/network)
 [![GitHub stars](https://img.shields.io/github/stars/SeppPenner/WindowsHelloTest.svg)](https://github.com/SeppPenner/WindowsHelloTest/stargazers)
-[![GitHub license](https://img.shields.io/badge/license-AGPL-blue.svg)](https://raw.githubusercontent.com/SeppPenner/WindowsHelloTest/master/License.txt)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/SeppPenner/WindowsHelloTest/master/License.txt)
 [![Known Vulnerabilities](https://snyk.io/test/github/SeppPenner/WindowsHelloTest/badge.svg)](https://snyk.io/test/github/SeppPenner/WindowsHelloTest)
 
 ## Available for
