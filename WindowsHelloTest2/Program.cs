@@ -19,7 +19,8 @@ namespace WindowsHelloTest2
             Console.WriteLine("Starting");
 
             var handle = new IntPtr();
-            IAuthProvider provider = new WinHelloProvider("Hello", handle);
+            var provider = WinHelloProvider.CreateInstance("Hello", handle);
+            provider.SetPersistentKeyName("Test");
             var parentPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent?.Parent?.FullName;
             if (parentPath == null)
             {

@@ -21,7 +21,8 @@ namespace WindowsHelloTest1
             var handle = new IntPtr();
             var data = new byte[] { 0x32, 0x32 };
             Console.WriteLine($"Decrypted data: { BitConverter.ToString(data).Replace("-", " ")}");
-            IAuthProvider provider = new WinHelloProvider("Hello", handle);
+            var provider = WinHelloProvider.CreateInstance("Hello", handle);
+            provider.SetPersistentKeyName("Test");
             var encryptedData = provider.Encrypt(data);
             Console.WriteLine($"Encrypted data: { BitConverter.ToString(encryptedData).Replace("-", " ")}");
             var parentPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent?.Parent?.FullName;
@@ -29,12 +30,6 @@ namespace WindowsHelloTest1
             {
                 Console.WriteLine("Some error occurred with the parent path...");
             }
-
-            var path = Path.Combine(parentPath, "test.dat");
-            File.WriteAllBytes(path, encryptedData);
-
-            Console.WriteLine("Done.");
-            Console.ReadKey();
         }
     }
 }
