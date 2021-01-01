@@ -2,7 +2,7 @@ WindowsHelloTest
 ====================================
 
 WindowsHelloTest is an assembly/ library to test the [Windows Hello nuget package](https://github.com/SeppPenner/WindowsHelloTest) I made.
-The assembly was written and tested in .Net 4.8.
+The assembly was written and tested in .NetFramework 4.8.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/o7cd2xgddgucuhsv?svg=true)](https://ci.appveyor.com/project/SeppPenner/windowshellotest)
 [![GitHub issues](https://img.shields.io/github/issues/SeppPenner/WindowsHelloTest.svg)](https://github.com/SeppPenner/WindowsHelloTest/issues)
@@ -22,6 +22,4 @@ The assembly was written and tested in .Net 4.8.
 Change history
 --------------
 
-* **Version 1.0.2.0 (2020-04-16)** : Updated nuget packages.
-* **Version 1.0.1.0 (2019-10-28)** : Updated nuget packages, added GitVersionTask.
-* **Version 1.0.0.0 (2019-08-29)** : 1.0 release.
+See the [Changelog](https://github.com/SeppPenner/WindowsHelloTest/blob/master/Changelog.md).
